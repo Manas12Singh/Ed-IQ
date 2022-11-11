@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<link rel="shortcut icon" type="png" href="http://127.0.0.1:5500/images/icon/favicon.png">
+	<title>Login SignUp</title>
+	<link rel="stylesheet" type="text/css" href="Login%20SignUp_files/loginStyle.css">
+	<script src="Login%20SignUp_files/jquery.min.js"></script>
+
+  <!-- It will redirect to the Home Page after submitting the form -->
+ 
+</head>
+<body>
+		<div class="form-box">
+			<div class="button-box" style="width:fit-content ;">
+				<button type="button" class="toggle-btn" id="log" onclick="login()" style="color: red ;text-align: center;font-size: 14px;">Teacher Log In</button>
+			</div>
+			<div class="social-icons">
+				<img src="Login%20SignUp_files/fb2.png">
+				<img src="Login%20SignUp_files/insta2.png">
+				<img src="Login%20SignUp_files/tt2.png">
+			</div>
+			
+			<!-- Login Form -->
+			<form id="login" class="input-group" action="dashboard.html">
+				<div class="inp">
+					<img src="Login%20SignUp_files/user.png"><input type="text" id="email" class="input-field" placeholder="Username or Phone Number" style="width: 88%; border:none;" required="required">
+				</div>
+				<div class="inp">
+					<img src="Login%20SignUp_files/password.png"><input type="password" id="password" class="input-field" placeholder="Password" style="width: 88%; border: none;" required="required">
+				</div>
+				<input type="checkbox" class="check-box">Remember Password
+				<button type="submit" class="submit-btn">Log In</button>
+			</form>
+		</div>
+		<script type="text/javascript" src="Login%20SignUp_files/script.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
